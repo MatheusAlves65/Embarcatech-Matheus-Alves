@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-pi-pico-w",
+      "id": "pico",
+      "top": -51.25,
+      "left": -121.25,
+      "attrs": { "builder": "pico-sdk" }
+    },
+    { "type": "wokwi-ds1307", "id": "rtc1", "top": -34.2, "left": 76.9, "attrs": {} }
+  ],
+  "connections": [
+    [ "pico:GP0", "$serialMonitor:RX", "", [] ],
+    [ "pico:GP1", "$serialMonitor:TX", "", [] ],
+    [ "pico:GND.8", "rtc1:GND", "black", [ "h67.51", "v9.6" ] ],
+    [ "rtc1:SDA", "pico:GP4", "green", [ "h-86.4", "v191.7", "h-211.2", "v-201.6" ] ],
+    [ "rtc1:SCL", "pico:GP5", "gold", [ "h-76.8", "v191.8", "h-230.4", "v-192" ] ],
+    [ "pico:3V3", "rtc1:GND", "red", [ "h19.51", "v-38.4", "h115.2" ] ]
+  ],
+  "dependencies": {}
+}
