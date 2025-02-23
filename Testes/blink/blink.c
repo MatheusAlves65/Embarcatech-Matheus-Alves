@@ -47,6 +47,7 @@ int main() {
     while (true) {
         pico_set_led(true);
         sleep_ms(LED_DELAY_MS);
+        printf("Led piscando");
         pico_set_led(false);
         sleep_ms(LED_DELAY_MS);
     }
